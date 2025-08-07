@@ -1,0 +1,86 @@
+﻿@model verdi_beach.Models.Reservation
+
+@{
+    ViewData["Title"] = "Резервации | Verdi Beach";
+}
+
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"]</title>
+    <link rel="icon" type="image/x-icon" href="~/assets/img/favicon.ico" />
+    <link rel="stylesheet" href="~/assets/css/app.css" />
+</head>
+<body>
+<div class="wrapper">
+    <section class="reservation-hero">
+        <h1>Резервирайте своята маса</h1>
+        <p>Гарантирайте си незабравимо изживяване на плажа с Verdi Beach!</p>
+    </section>
+    <section class="reservation-zones">
+        <div class="zone-card">
+            <span class="zone-icon"><i class="fa-solid fa-umbrella-beach"></i></span>
+            <h3>Шезлонг с чадър и маса</h3>
+            <p>Релаксирайте на първа линия до морето с удобен шезлонг, голям чадър и масичка за вашия комфорт.</p>
+        </div>
+        <div class="zone-card">
+            <span class="zone-icon"><i class="fa-solid fa-tent"></i></span>
+            <h3>Голяма шатра</h3>
+            <p>Голяма шатра с просторна сянка, под която са разположени различни маси и столове – идеално за групи, семейства и прохлада през горещите дни.</p>
+        </div>
+    </section>
+    <section class="reservation-section">
+        <div class="reservation-form-container">
+            <h2>Форма за резервация</h2>
+            @using (Html.BeginForm("Index", "Reservation", FormMethod.Post, new { @class = "reservation-form", autocomplete = "off" }))
+            {
+                @Html.AntiForgeryToken()
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                <label for="name">Име и фамилия</label>
+                @Html.TextBoxFor(m => m.Name, new { @id = "name", placeholder = "Вашето име..." })
+                @Html.ValidationMessageFor(m => m.Name, "", new { @class = "text-danger" })
+
+                <label for="phone">Телефон</label>
+                @Html.TextBoxFor(m => m.Phone, new { @id = "phone", type = "tel", placeholder = "08xxxxxxxx" })
+                @Html.ValidationMessageFor(m => m.Phone, "", new { @class = "text-danger" })
+
+                <label for="email">Имейл</label>
+                @Html.TextBoxFor(m => m.Email, new { @id = "email", type = "email", placeholder = "you@email.com" })
+                @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
+
+                <label for="date">Дата</label>
+                @Html.TextBoxFor(m => m.Date, new { @id = "date", type = "date", min = ViewBag.MinDate })
+                @Html.ValidationMessageFor(m => m.Date, "", new { @class = "text-danger" })
+
+                <label for="time">Час</label>
+                @Html.TextBoxFor(m => m.Time, new { @id = "time", type = "time" })
+                @Html.ValidationMessageFor(m => m.Time, "", new { @class = "text-danger" })
+
+                <label for="zone">Зона</label>
+                @Html.DropDownListFor(m => m.ReservationZoneId,
+                    (SelectList)ViewBag.Zones,
+                    "Изберете зона...",
+                    new { @id = "zone", @class = "form-control", required = "required" }
+                )
+                @Html.ValidationMessageFor(m => m.ReservationZoneId, "", new { @class = "text-danger" })
+
+                <label for="guests">Брой гости</label>
+                @Html.DropDownListFor(m => m.Guests, new SelectList(
+                    Enumerable.Range(1, 10).Select(i => new { Value = i, Text = i.ToString() }),
+                    "Value", "Text"),
+                    "Изберете...", new { @id = "guests", required = "required" })
+                @Html.ValidationMessageFor(m => m.Guests, "", new { @class = "text-danger" })
+
+                <label for="message">Съобщение (по желание)</label>
+                @Html.TextAreaFor(m => m.Message, 3, 40, new { @id = "message", placeholder = "Специални изисквания..." })
+
+                <button type="submit">Изпрати резервация</button>
+            }
+        </div>
+    </section>
+</div>
+</body>
+</html>

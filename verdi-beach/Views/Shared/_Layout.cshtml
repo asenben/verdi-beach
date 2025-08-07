@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>@ViewData["Title"] - verdi_beach</title>
+    <link rel="stylesheet" href="~/assets/css/app.css">
+</head>
+<body>
+<header class="main-header">
+    <nav class="main-menu">
+        <article class="logo">
+            <img src="~/assets/img/logo.png" alt="Verdi Beach Logo" />
+        </article>
+        <article class="toggle-bar">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </article>
+        <ul>
+            <li><a asp-action="Index" asp-controller="Home" class="active" title="Начало">Начало</a></li>
+            <li><a asp-action="Index" asp-controller="Gallery" title="Галерия">Галерия</a></li>
+            <li><a asp-action="Menu" asp-controller="Home" title="Меню">Меню</a></li>
+            <li><a asp-action="About" asp-controller="Home" title="За нас">За нас</a></li>
+            <li><a asp-action="Contact" asp-controller="Home" title="Контакти">Контакти</a></li>
+            @using Microsoft.AspNetCore.Identity
+            @using Microsoft.AspNetCore.Authorization
+
+            <div class="auth-buttons" style="display: flex; gap: 10px; align-items: center; margin-left: auto;">
+                @if (!User.Identity.IsAuthenticated)
+                {
+                    <a class="btn btn-outline-primary" asp-area="Identity" asp-page="/Account/Login">Login</a>
+                    <a class="btn btn-primary" asp-area="Identity" asp-page="/Account/Register">Register</a>
+                }
+                else
+                {
+                    <span class="navbar-text" style="margin-right: 10px;">@User.Identity.Name</span>
+                    <form asp-area="Identity" asp-page="/Account/Logout" method="post" style="display:inline;">
+                        <button type="submit" class="btn btn-outline-danger">Logout</button>
+                    </form>
+                }
+            </div>
+        </ul>
+    </nav>
+</header>
+<div class="container">
+    <main role="main" class="pb-3">
+        @RenderBody()
+    </main>
+</div>
+<footer class="main-footer">
+    <div class="footer-simple">
+        <p>&copy; 2025 Verdi Beach. Всички права запазени. | к. к. св. Константин и Елена |</p>
+    </div>
+</footer>
+@await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

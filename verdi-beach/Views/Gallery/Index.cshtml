@@ -1,0 +1,124 @@
+﻿@model IEnumerable<verdi_beach.Models.GalleryItem>
+@{
+    ViewData["Title"] = "Галерия";
+}
+
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Verdi Beach - Ресторант на плажа</title>
+    <link rel="icon" type="image/x-icon" href="~/assets/img/favicon.ico" />
+    <link rel="stylesheet" href="~/assets/css/app.css" />
+    <script src="~/assets/js/API.js" defer></script>
+    <script src="~/assets/js/gallery-data.js" defer></script>
+    <script src="~/assets/js/app.js" defer></script>
+    <script src="~/assets/js/gallery.js" defer></script>
+    <script src="~/assets/js/likes.js" defer></script>
+</head>
+<body>
+    <div class="wrapper">
+        <main class="gallery-main">
+            <div class="gallery-container">
+                <div class="gallery-header">
+                    <h1>Нашата галерия</h1>
+                    <p>Разгледайте най-добрите моменти от Verdi Beach</p>
+                </div>
+
+                @if (User.IsInRole("Admin"))
+                {
+                <!-- Форма за качване -->
+                <form asp-action="Upload" asp-controller="Gallery" enctype="multipart/form-data" method="post" class="upload-form">
+                    <div>
+                        <label>Заглавие:</label>
+                        <input type="text" name="title" required />
+                    </div>
+                    <div>
+                        <label>Файл (снимка или видео):</label>
+                        <input type="file" name="file" accept="image/*,video/mp4" required />
+                    </div>
+                    <button type="submit">Качи</button>
+                </form>
+                }
+
+                <div class="gallery-grid" id="galleryGrid">
+                    @if (!Model.Any())
+                    {
+                        <p>Няма качени файлове.</p>
+                    }
+                    else
+                    {
+                        foreach (var item in Model)
+                        {
+                            <div class="gallery-item">
+                                <div class="gallery-media">
+                                    @if (item.IsVideo)
+                                    {
+                                        <video controls>
+                                            <source src="@item.ImagePath" type="video/mp4" />
+                                        </video>
+                                    }
+                                    else
+                                    {
+                                        <img src="@item.ImagePath" alt="@item.Title" />
+                                    }
+                                </div>
+                                <h4>@item.Title</h4>
+                                <p>Качено на: @item.DateUploaded.ToString("dd.MM.yyyy HH:mm")</p>
+                                <p>Харесвания: @item.Likes</p>
+                                <form asp-action="Like" asp-controller="Gallery" method="post" asp-route-id="@item.Id">
+                                    <button type="submit">❤️ Харесай</button>
+                                </form>
+                                <form asp-action="Delete" asp-controller="Gallery" method="post" asp-route-id="@item.Id">
+                                    <button type="submit" onclick="return confirm('Сигурен ли си, че искаш да изтриеш?');">🗑 Изтрий</button>
+                                </form>
+                            </div>
+                        }
+                    }
+                </div>
+            </div>
+        </main>
+
+        <!-- Lightbox -->
+        <div id="lightbox" class="lightbox">
+            <div class="lightbox-backdrop"></div>
+            <div class="lightbox-container">
+                <div class="lightbox-header">
+                    <div class="lightbox-counter">
+                        <span id="currentIndex">1</span>
+                        <span class="separator">/</span>
+                        <span id="totalItems">0</span>
+                    </div>
+                    <button class="lightbox-close" id="closeLightbox">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </div>
+                <div class="lightbox-content">
+                    <button class="lightbox-nav lightbox-prev" id="prevItem">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+                    <div class="lightbox-media">
+                        <img id="lightboxImage" src="" alt="">
+                        <video id="lightboxVideo" controls style="display: none;">
+                            <source src="" type="video/mp4">
+                        </video>
+                    </div>
+                    <button class="lightbox-nav lightbox-next" id="nextItem">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+                </div>
+                <div class="lightbox-footer">
+                    <h3 id="lightboxTitle">Заглавие</h3>
+                    <div class="lightbox-actions">
+                        <button class="lightbox-action-btn" id="shareBtn">
+                            <i class="fa-solid fa-share"></i>
+                            <span>Сподели</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

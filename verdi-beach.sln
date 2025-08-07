@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "verdi-beach", "verdi-beach\verdi-beach.csproj", "{0C635B8A-0FF6-4C3C-B510-B595C8D2C140}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0C635B8A-0FF6-4C3C-B510-B595C8D2C140}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C635B8A-0FF6-4C3C-B510-B595C8D2C140}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C635B8A-0FF6-4C3C-B510-B595C8D2C140}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C635B8A-0FF6-4C3C-B510-B595C8D2C140}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
