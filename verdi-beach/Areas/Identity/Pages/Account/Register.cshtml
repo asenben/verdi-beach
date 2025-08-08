@@ -6,25 +6,25 @@
 
 <div class="register-section">
     <div class="register-form-container">
-        <h2 class="register-title">Create a new account</h2>
+        <h2 class="register-title">Регистрация</h2>
         <form id="registerForm" asp-route-returnUrl="@Model.ReturnUrl" method="post" class="register-form">
             <div class="register-validation" asp-validation-summary="ModelOnly" role="alert"></div>
             <div class="register-form-group">
-                <label class="register-label" asp-for="Input.Email">Email</label>
+                <label class="register-label" asp-for="Input.Email">Имейл</label>
                 <input class="register-input" asp-for="Input.Email" autocomplete="username" aria-required="true" placeholder="name@example.com" />
                 <span class="register-validation" asp-validation-for="Input.Email"></span>
             </div>
             <div class="register-form-group">
-                <label class="register-label" asp-for="Input.Password">Password</label>
+                <label class="register-label" asp-for="Input.Password">Парола</label>
                 <input class="register-input" asp-for="Input.Password" autocomplete="new-password" aria-required="true" placeholder="password" />
                 <span class="register-validation" asp-validation-for="Input.Password"></span>
             </div>
             <div class="register-form-group">
-                <label class="register-label" asp-for="Input.ConfirmPassword">Confirm Password</label>
+                <label class="register-label" asp-for="Input.ConfirmPassword">Потвърдете паролата</label>
                 <input class="register-input" asp-for="Input.ConfirmPassword" autocomplete="new-password" aria-required="true" placeholder="password" />
                 <span class="register-validation" asp-validation-for="Input.ConfirmPassword"></span>
             </div>
-            <button id="registerSubmit" type="submit" class="register-btn">Register</button>
+            <button id="registerSubmit" type="submit" class="register-btn">Регистрирай</button>
         </form>
     </div>
 </div>

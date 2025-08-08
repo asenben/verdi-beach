@@ -153,6 +153,10 @@
       "PackagePath": "staticwebassets\\assets\\js\\menu.js"
     },
     {
+      "Id": "C:\\Users\\SoftUni\\RiderProjects\\verdi-beach\\verdi-beach\\verdi-beach\\wwwroot\\assets\\js\\price-euro.js",
+      "PackagePath": "staticwebassets\\assets\\js\\price-euro.js"
+    },
+    {
       "Id": "C:\\Users\\SoftUni\\RiderProjects\\verdi-beach\\verdi-beach\\verdi-beach\\wwwroot\\assets\\video\\event_1.mp4",
       "PackagePath": "staticwebassets\\assets\\video\\event_1.mp4"
     },

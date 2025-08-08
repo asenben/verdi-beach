@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="~/assets/css/app.css" />
     <script src="~/assets/js/app.js" defer></script>
     <script src="~/assets/js/menu.js" defer></script>
+    <script src="~/assets/js/price-euro.js" defer></script>
   </head>
   <body>
     <div class="wrapper">
@@ -18,6 +19,7 @@
             <p>Verdi Beach</p>
           </div>
           <div class="menu-sections">
+
             <div class="menu-section">
               <h2>СКАРА</h2>
               <div class="menu-items-list">
@@ -27,7 +29,7 @@
                     <span class="item-weight">350г</span>
                   </div>
                   <span class="item-dots">...........</span>
-                  <span class="item-price">42 лв</span>
+                  <span class="item-price" data-price="42"></span>
                 </div>
                 <div class="menu-item-row">
                   <div class="item-info">
@@ -35,7 +37,7 @@
                     <span class="item-weight">280г</span>
                   </div>
                   <span class="item-dots">...........</span>
-                  <span class="item-price">38 лв</span>
+                  <span class="item-price" data-price="38"></span>
                 </div>
                 <div class="menu-item-row">
                   <div class="item-info">
@@ -43,7 +45,7 @@
                     <span class="item-weight">300г</span>
                   </div>
                   <span class="item-dots">...........</span>
-                  <span class="item-price">48 лв</span>
+                  <span class="item-price" data-price="48"></span>
                 </div>
                 <div class="menu-item-row">
                   <div class="item-info">
@@ -51,7 +53,7 @@
                     <span class="item-weight">250г</span>
                   </div>
                   <span class="item-dots">...........</span>
-                  <span class="item-price">32 лв</span>
+                  <span class="item-price" data-price="32"></span>
                 </div>
                 <div class="menu-item-row">
                   <div class="item-info">
@@ -59,7 +61,7 @@
                     <span class="item-weight">300г</span>
                   </div>
                   <span class="item-dots">...........</span>
-                  <span class="item-price">45 лв</span>
+                  <span class="item-price" data-price="45"></span>
                 </div>
                 <div class="menu-item-row">
                   <div class="item-info">
@@ -67,10 +69,11 @@
                     <span class="item-weight">400г</span>
                   </div>
                   <span class="item-dots">...........</span>
-                  <span class="item-price">35 лв</span>
+                  <span class="item-price" data-price="35"></span>
                 </div>
               </div>
             </div>
+
             <div class="menu-section">
               <h2>ПИЦИ</h2>
               <div class="menu-items-list">
@@ -80,7 +83,7 @@
                     <span class="item-weight">450г</span>
                   </div>
                   <span class="item-dots">...........</span>
-                  <span class="item-price">18 лв</span>
+                  <span class="item-price" data-price="18"></span>
                 </div>
                 <div class="menu-item-row">
                   <div class="item-info">
@@ -88,7 +91,7 @@
                     <span class="item-weight">500г</span>
                   </div>
                   <span class="item-dots">...........</span>
-                  <span class="item-price">22 лв</span>
+                  <span class="item-price" data-price="22"></span>
                 </div>
                 <div class="menu-item-row">
                   <div class="item-info">
@@ -96,7 +99,7 @@
                     <span class="item-weight">520г</span>
                   </div>
                   <span class="item-dots">...........</span>
-                  <span class="item-price">25 лв</span>
+                  <span class="item-price" data-price="25"></span>
                 </div>
                 <div class="menu-item-row">
                   <div class="item-info">
@@ -104,7 +107,7 @@
                     <span class="item-weight">480г</span>
                   </div>
                   <span class="item-dots">...........</span>
-                  <span class="item-price">20 лв</span>
+                  <span class="item-price" data-price="20"></span>
                 </div>
                 <div class="menu-item-row">
                   <div class="item-info">
@@ -112,7 +115,7 @@
                     <span class="item-weight">550г</span>
                   </div>
                   <span class="item-dots">...........</span>
-                  <span class="item-price">28 лв</span>
+                  <span class="item-price" data-price="28"></span>
                 </div>
                 <div class="menu-item-row">
                   <div class="item-info">
@@ -120,325 +123,7 @@
                     <span class="item-weight">500г</span>
                   </div>
                   <span class="item-dots">...........</span>
-                  <span class="item-price">24 лв</span>
-                </div>
-              </div>
-            </div>
-            <div class="menu-section">
-              <h2>САЛАТИ</h2>
-              <div class="menu-items-list">
-                <div class="menu-item-row">
-                  <div class="item-info">
-                    <span class="item-name">Гръцка салата</span>
-                    <span class="item-weight">200г</span>
-                  </div>
-                  <span class="item-dots">...........</span>
-                  <span class="item-price">18 лв</span>
-                </div>
-                <div class="menu-item-row">
-                  <div class="item-info">
-                    <span class="item-name">Салата с риба тон</span>
-                    <span class="item-weight">220г</span>
-                  </div>
-                  <span class="item-dots">...........</span>
-                  <span class="item-price">24 лв</span>
-                </div>
-                <div class="menu-item-row">
-                  <div class="item-info">
-                    <span class="item-name">Цезар с пиле</span>
-                    <span class="item-weight">250г</span>
-                  </div>
-                  <span class="item-dots">...........</span>
-                  <span class="item-price">22 лв</span>
-                </div>
-                <div class="menu-item-row">
-                  <div class="item-info">
-                    <span class="item-name">Шопска салата</span>
-                    <span class="item-weight">180г</span>
-                  </div>
-                  <span class="item-dots">...........</span>
-                  <span class="item-price">16 лв</span>
-                </div>
-                <div class="menu-item-row">
-                  <div class="item-info">
-                    <span class="item-name">Руска салата</span>
-                    <span class="item-weight">200г</span>
-                  </div>
-                  <span class="item-dots">...........</span>
-                  <span class="item-price">14 лв</span>
-                </div>
-                <div class="menu-item-row">
-                  <div class="item-info">
-                    <span class="item-name">Капрезе</span>
-                    <span class="item-weight">150г</span>
-                  </div>
-                  <span class="item-dots">...........</span>
-                  <span class="item-price">20 лв</span>
-                </div>
-              </div>
-            </div>
-            <div class="menu-section">
-              <h2>КАТМИ</h2>
-              <div class="menu-items-list">
-                <div class="menu-item-row">
-                  <div class="item-info">
-                    <span class="item-name">Катма с месо</span>
-                    <span class="item-weight">300г</span>
-                  </div>
-                  <span class="item-dots">...........</span>
-                  <span class="item-price">16 лв</span>
-                </div>
-                <div class="menu-item-row">
-                  <div class="item-info">
-                    <span class="item-name">Катма със сирене</span>
-                    <span class="item-weight">280г</span>
-                  </div>
-                  <span class="item-dots">...........</span>
-                  <span class="item-price">14 лв</span>
-                </div>
-                <div class="menu-item-row">
-                  <div class="item-info">
-                    <span class="item-name">Катма с шпек</span>
-                    <span class="item-weight">320г</span>
-                  </div>
-                  <span class="item-dots">...........</span>
-                  <span class="item-price">18 лв</span>
-                </div>
-                <div class="menu-item-row">
-                  <div class="item-info">
-                    <span class="item-name">Катма с гъби</span>
-                    <span class="item-weight">290г</span>
-                  </div>
-                  <span class="item-dots">...........</span>
-                  <span class="item-price">15 лв</span>
-                </div>
-                <div class="menu-item-row">
-                  <div class="item-info">
-                    <span class="item-name">Катма микс</span>
-                    <span class="item-weight">350г</span>
-                  </div>
-                  <span class="item-dots">...........</span>
-                  <span class="item-price">20 лв</span>
-                </div>
-                <div class="menu-item-row">
-                  <div class="item-info">
-                    <span class="item-name">Катма с кисело мляко</span>
-                    <span class="item-weight">250г</span>
-                  </div>
-                  <span class="item-dots">...........</span>
-                  <span class="item-price">12 лв</span>
-                </div>
-              </div>
-            </div>
-            <div class="menu-section">
-              <h2>КОКТЕЙЛИ</h2>
-              <div class="menu-items-list">
-                <div class="menu-item-row">
-                  <div class="item-info">
-                    <span class="item-name">Мохито</span>
-                    <span class="item-weight">300мл</span>
-                  </div>
-                  <span class="item-dots">...........</span>
-                  <span class="item-price">15 лв</span>
-                </div>
-                <div class="menu-item-row">
-                  <div class="item-info">
-                    <span class="item-name">Пина Колада</span>
-                    <span class="item-weight">350мл</span>
-                  </div>
-                  <span class="item-dots">...........</span>
-                  <span class="item-price">18 лв</span>
-                </div>
-                <div class="menu-item-row">
-                  <div class="item-info">
-                    <span class="item-name">Дайкири</span>
-                    <span class="item-weight">250мл</span>
-                  </div>
-                  <span class="item-dots">...........</span>
-                  <span class="item-price">16 лв</span>
-                </div>
-                <div class="menu-item-row">
-                  <div class="item-info">
-                    <span class="item-name">Лонг Айленд</span>
-                    <span class="item-weight">300мл</span>
-                  </div>
-                  <span class="item-dots">...........</span>
-                  <span class="item-price">20 лв</span>
-                </div>
-                <div class="menu-item-row">
-                  <div class="item-info">
-                    <span class="item-name">Секс он дъ Бийч</span>
-                    <span class="item-weight">280мл</span>
-                  </div>
-                  <span class="item-dots">...........</span>
-                  <span class="item-price">17 лв</span>
-                </div>
-                <div class="menu-item-row">
-                  <div class="item-info">
-                    <span class="item-name">Куба Либре</span>
-                    <span class="item-weight">300мл</span>
-                  </div>
-                  <span class="item-dots">...........</span>
-                  <span class="item-price">14 лв</span>
-                </div>
-              </div>
-            </div>
-            <div class="menu-section">
-              <h2>ВИНА</h2>
-              <div class="menu-items-list">
-                <div class="menu-item-row">
-                  <div class="item-info">
-                    <span class="item-name">Червено българско</span>
-                    <span class="item-weight">150мл</span>
-                  </div>
-                  <span class="item-dots">...........</span>
-                  <span class="item-price">8 лв</span>
-                </div>
-                <div class="menu-item-row">
-                  <div class="item-info">
-                    <span class="item-name">Бяло българско</span>
-                    <span class="item-weight">150мл</span>
-                  </div>
-                  <span class="item-dots">...........</span>
-                  <span class="item-price">8 лв</span>
-                </div>
-                <div class="menu-item-row">
-                  <div class="item-info">
-                    <span class="item-name">Розе българско</span>
-                    <span class="item-weight">150мл</span>
-                  </div>
-                  <span class="item-dots">...........</span>
-                  <span class="item-price">9 лв</span>
-                </div>
-                <div class="menu-item-row">
-                  <div class="item-info">
-                    <span class="item-name">Италианско Кианти</span>
-                    <span class="item-weight">150мл</span>
-                  </div>
-                  <span class="item-dots">...........</span>
-                  <span class="item-price">12 лв</span>
-                </div>
-                <div class="menu-item-row">
-                  <div class="item-info">
-                    <span class="item-name">Френско Шардоне</span>
-                    <span class="item-weight">150мл</span>
-                  </div>
-                  <span class="item-dots">...........</span>
-                  <span class="item-price">15 лв</span>
-                </div>
-                <div class="menu-item-row">
-                  <div class="item-info">
-                    <span class="item-name">Просеко</span>
-                    <span class="item-weight">150мл</span>
-                  </div>
-                  <span class="item-dots">...........</span>
-                  <span class="item-price">18 лв</span>
-                </div>
-              </div>
-            </div>
-            <div class="menu-section">
-              <h2>БИРА</h2>
-              <div class="menu-items-list">
-                <div class="menu-item-row">
-                  <div class="item-info">
-                    <span class="item-name">Каменица</span>
-                    <span class="item-weight">500мл</span>
-                  </div>
-                  <span class="item-dots">...........</span>
-                  <span class="item-price">4 лв</span>
-                </div>
-                <div class="menu-item-row">
-                  <div class="item-info">
-                    <span class="item-name">Загорка</span>
-                    <span class="item-weight">500мл</span>
-                  </div>
-                  <span class="item-dots">...........</span>
-                  <span class="item-price">4 лв</span>
-                </div>
-                <div class="menu-item-row">
-                  <div class="item-info">
-                    <span class="item-name">Хайнекен</span>
-                    <span class="item-weight">330мл</span>
-                  </div>
-                  <span class="item-dots">...........</span>
-                  <span class="item-price">6 лв</span>
-                </div>
-                <div class="menu-item-row">
-                  <div class="item-info">
-                    <span class="item-name">Коронита</span>
-                    <span class="item-weight">330мл</span>
-                  </div>
-                  <span class="item-dots">...........</span>
-                  <span class="item-price">7 лв</span>
-                </div>
-                <div class="menu-item-row">
-                  <div class="item-info">
-                    <span class="item-name">Ердингер</span>
-                    <span class="item-weight">500мл</span>
-                  </div>
-                  <span class="item-dots">...........</span>
-                  <span class="item-price">8 лв</span>
-                </div>
-                <div class="menu-item-row">
-                  <div class="item-info">
-                    <span class="item-name">Бира на кран</span>
-                    <span class="item-weight">500мл</span>
-                  </div>
-                  <span class="item-dots">...........</span>
-                  <span class="item-price">5 лв</span>
-                </div>
-              </div>
-            </div>
-            <div class="menu-section">
-              <h2>НАПИТКИ</h2>
-              <div class="menu-items-list">
-                <div class="menu-item-row">
-                  <div class="item-info">
-                    <span class="item-name">Кока-Кола</span>
-                    <span class="item-weight">330мл</span>
-                  </div>
-                  <span class="item-dots">...........</span>
-                  <span class="item-price">3 лв</span>
-                </div>
-                <div class="menu-item-row">
-                  <div class="item-info">
-                    <span class="item-name">Фанта</span>
-                    <span class="item-weight">330мл</span>
-                  </div>
-                  <span class="item-dots">...........</span>
-                  <span class="item-price">3 лв</span>
-                </div>
-                <div class="menu-item-row">
-                  <div class="item-info">
-                    <span class="item-name">Минерална вода</span>
-                    <span class="item-weight">500мл</span>
-                  </div>
-                  <span class="item-dots">...........</span>
-                  <span class="item-price">2 лв</span>
-                </div>
-                <div class="menu-item-row">
-                  <div class="item-info">
-                    <span class="item-name">Прясо изцеден сок</span>
-                    <span class="item-weight">300мл</span>
-                  </div>
-                  <span class="item-dots">...........</span>
-                  <span class="item-price">6 лв</span>
-                </div>
-                <div class="menu-item-row">
-                  <div class="item-info">
-                    <span class="item-name">Айс чай</span>
-                    <span class="item-weight">330мл</span>
-                  </div>
-                  <span class="item-dots">...........</span>
-                  <span class="item-price">4 лв</span>
-                </div>
-                <div class="menu-item-row">
-                  <div class="item-info">
-                    <span class="item-name">Кафе еспресо</span>
-                    <span class="item-weight">50мл</span>
-                  </div>
-                  <span class="item-dots">...........</span>
-                  <span class="item-price">3 лв</span>
+                  <span class="item-price" data-price="24"></span>
                 </div>
               </div>
             </div>

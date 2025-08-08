@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "6dhAP9Pbc3XJ6RUXYuDRF2MiyLAn7ZJXJLsWrDxdnpw=",
+  "Hash": "W92SsPBo5cBowGNZet+E2V1X0+2ev+ZZeSbd68mrYa8=",
   "Source": "verdi-beach",
   "BasePath": "_content/verdi-beach",
   "Mode": "Default",
@@ -1896,6 +1896,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\js\\menu.js"
+    },
+    {
+      "Identity": "C:\\Users\\SoftUni\\RiderProjects\\verdi-beach\\verdi-beach\\verdi-beach\\wwwroot\\assets\\js\\price-euro.js",
+      "SourceId": "verdi-beach",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\SoftUni\\RiderProjects\\verdi-beach\\verdi-beach\\verdi-beach\\wwwroot\\",
+      "BasePath": "_content/verdi-beach",
+      "RelativePath": "assets/js/price-euro.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\js\\price-euro.js"
     },
     {
       "Identity": "C:\\Users\\SoftUni\\RiderProjects\\verdi-beach\\verdi-beach\\verdi-beach\\wwwroot\\assets\\video\\event_1.mp4",

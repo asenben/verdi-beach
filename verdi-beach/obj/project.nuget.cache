@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "Exobt5N1Pd8=",
+  "dgSpecHash": "l+iZM2D2VdI=",
   "success": true,
   "projectFilePath": "C:\\Users\\SoftUni\\RiderProjects\\verdi-beach\\verdi-beach\\verdi-beach\\verdi-beach.csproj",
   "expectedPackageFiles": [
@@ -127,6 +127,8 @@
     "C:\\Users\\SoftUni\\.nuget\\packages\\mimekit\\4.13.0\\mimekit.4.13.0.nupkg.sha512",
     "C:\\Users\\SoftUni\\.nuget\\packages\\mono.texttemplating\\2.3.1\\mono.texttemplating.2.3.1.nupkg.sha512",
     "C:\\Users\\SoftUni\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
+    "C:\\Users\\SoftUni\\.nuget\\packages\\npgsql\\8.0.6\\npgsql.8.0.6.nupkg.sha512",
+    "C:\\Users\\SoftUni\\.nuget\\packages\\npgsql.entityframeworkcore.postgresql\\8.0.11\\npgsql.entityframeworkcore.postgresql.8.0.11.nupkg.sha512",
     "C:\\Users\\SoftUni\\.nuget\\packages\\nuget.common\\6.11.0\\nuget.common.6.11.0.nupkg.sha512",
     "C:\\Users\\SoftUni\\.nuget\\packages\\nuget.configuration\\6.11.0\\nuget.configuration.6.11.0.nupkg.sha512",
     "C:\\Users\\SoftUni\\.nuget\\packages\\nuget.dependencyresolver.core\\6.11.0\\nuget.dependencyresolver.core.6.11.0.nupkg.sha512",
