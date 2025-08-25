@@ -1,4 +1,8 @@
-﻿<!DOCTYPE html>
+﻿@{
+var currentController = ViewContext.RouteData.Values["controller"]?.ToString();
+var currentAction = ViewContext.RouteData.Values["action"]?.ToString();
+}
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8"/>
@@ -18,11 +22,11 @@
             <div class="bar"></div>
         </article>
         <ul>
-            <li><a asp-action="Index" asp-controller="Home" class="active" title="Начало">Начало</a></li>
-            <li><a asp-action="Index" asp-controller="Gallery" title="Галерия">Галерия</a></li>
-            <li><a asp-action="Menu" asp-controller="Home" title="Меню">Меню</a></li>
-            <li><a asp-action="About" asp-controller="Home" title="За нас">За нас</a></li>
-            <li><a asp-action="Contact" asp-controller="Home" title="Контакти">Контакти</a></li>
+            <li><a asp-action="Index" asp-controller="Home" class="@(currentController=="Home" && currentAction=="Index" ? "active" : null)" title="Начало">Начало</a></li>
+            <li><a asp-action="Index" asp-controller="Gallery" class="@(currentController=="Gallery" && currentAction=="Index" ? "active" : null)" title="Галерия">Галерия</a></li>
+            <li><a asp-action="Menu" asp-controller="Home" class="@(currentController=="Home" && currentAction=="Menu" ? "active" : null)" title="Меню">Меню</a></li>
+            <li><a asp-action="About" asp-controller="Home" class="@(currentController=="Home" && currentAction=="About" ? "active" : null)" title="За нас">За нас</a></li>
+            <li><a asp-action="Contact" asp-controller="Home" class="@(currentController=="Home" && currentAction=="Contact" ? "active" : null)" title="Контакти">Контакти</a></li>
             @using Microsoft.AspNetCore.Identity
             @using Microsoft.AspNetCore.Authorization
 

@@ -80,11 +80,41 @@
     border-radius: 1.5px;
     transition: width 0.25s;
     position: absolute;
-    left: 0; bottom: 2px;
+    left: 0; bottom: 5px;
 }
 .main-header .main-menu ul li a.active::after,
 .main-header .main-menu ul li a:hover::after {
     width: 100%;
+}
+
+.auth-buttons {
+    margin-left: 20px;
+}
+
+.auth-buttons a  {
+    color: #000000;
+    text-decoration: none;
+    border: 2px solid #d4af37;
+    border-radius: 5px;
+    padding: 5px;
+    transition: all 0.3s ease;
+}
+
+.auth-buttons a:hover {
+    background: #d4af37;
+    color: #FFFFFF;
+}
+
+.auth-buttons form .btn-outline-danger {
+    border: 2px solid #d4af37;
+    border-radius: 5px;
+    padding: 5px;
+    transition: all 0.3s ease;
+}
+
+.auth-buttons form .btn-outline-danger:hover {
+    background: #d4af37;
+    color: #FFFFFF;
 }
 
 .main-header .main-menu .toggle-bar {

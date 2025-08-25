@@ -1,5 +1,24 @@
 initAnimations();
 initHoverEffects();
+initPriceConversion();
+
+function initPriceConversion() {
+  const exchangeRate = 1.95;
+  const priceElements = document.querySelectorAll('.item-price');
+
+  priceElements.forEach(priceElement => {
+    const priceText = priceElement.textContent.trim();
+
+    const priceMatch = priceText.match(/(\d+(?:\.\d+)?)\s*лв/);
+
+    if (priceMatch) {
+      const priceInLeva = parseFloat(priceMatch[1]);
+      const priceInEuro = (priceInLeva / exchangeRate).toFixed(2);
+
+      priceElement.textContent = `${priceInLeva} лв (${priceInEuro} €)`;
+    }
+  });
+}
 
 function initAnimations() {
   const observer = new IntersectionObserver(

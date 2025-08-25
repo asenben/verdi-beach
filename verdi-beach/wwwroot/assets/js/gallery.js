@@ -155,8 +155,7 @@ class ModernLightbox {
   openLightbox(index) {
     this.currentIndex = index;
     this.isOpen = true;
-
-    document.body.style.overflow = "hidden";
+    
     this.lightbox.classList.add("active");
     this.loadCurrentItem();
 
