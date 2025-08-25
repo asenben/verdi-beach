@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("verdi-beach")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bae7eaa3ee8569aeb8bf60a3b050bffcb1a57e2b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cf94a3708229168cb3d14459454161acd416ca4f")]
 [assembly: System.Reflection.AssemblyProductAttribute("verdi-beach")]
 [assembly: System.Reflection.AssemblyTitleAttribute("verdi-beach")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
